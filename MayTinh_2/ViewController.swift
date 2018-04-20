@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         if (lb_KetQua.text == "0" || lb_KetQua.text == "+" || lb_KetQua.text == "-" || lb_KetQua.text == "x" || lb_KetQua.text == "÷")
         {
             lb_KetQua.text = ""
-            
             lb_KetQua.text = lb_KetQua.text! + String((sender as AnyObject).tag - 1)
             Number = Double(lb_KetQua.text!)!
         }
