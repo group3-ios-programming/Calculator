@@ -23,6 +23,13 @@ class ViewController: UIViewController {
     var KetQuaPhepTinh :Double = 0;
 
     
+    
+    func isEnablePhepTinh(){
+        btn_DauCong_Status.isEnabled = true
+        btn_DauTru_Status.isEnabled=true
+        btn_DauNhan_Status.isEnabled=true
+        btn_DauChia_Status.isEnabled=true
+    }
     @IBAction func btn_Numbers(_ sender: UIButton) {
         if (lb_KetQua.text == "0" || lb_KetQua.text == "+" || lb_KetQua.text == "-" || lb_KetQua.text == "x" || lb_KetQua.text == "÷")
         {
@@ -33,9 +40,10 @@ class ViewController: UIViewController {
             
         else
         {
-            
+    
             lb_KetQua.text = lb_KetQua.text! + String((sender as AnyObject).tag - 1)
             Number = Double(lb_KetQua.text!)!
+            isEnablePhepTinh()
             
         }
     }
